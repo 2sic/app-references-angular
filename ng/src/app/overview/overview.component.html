@@ -1,0 +1,13 @@
+<div>
+    <div *ngIf="!!settings" [sxc-toolbar]="toolbarservice.toolbarForInstance(settings)">
+      <h1 *ngIf="!settings.HideTitle">{{settings.Title}}</h1>
+      <h2 class="subtitle" *ngIf="!settings.HideTitle">{{settings.SubTitle}}</h2>
+    </div>
+
+    <div *ngIf="isAdmin && categoryFilter">
+      Nur für Admin sichtbar. Aktuelle Kategorie: {{categoryFilter?.Title}}
+    </div>
+
+    <app-categories *ngIf="!categoryFilter"></app-categories>
+    <app-references *ngIf="!!settings" [categoryFilter]="categoryFilter" [settings]="settings" class="app-references-inner"></app-references>
+</div>

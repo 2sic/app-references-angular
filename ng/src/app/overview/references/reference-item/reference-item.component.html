@@ -1,0 +1,23 @@
+<detail-link [useRouting]="!isCategoryPage" [path]="reference.UrlPath" [referencesPage]="referencesPage" [sxc-toolbar]="toolbarservice.toolbarFor(reference)">
+  <div>
+
+    <ng-container *ngIf="!!reference.PreviewImage && !hasImgError">
+      <img [src]="reference.PreviewImage + cropImgString" (error)="hasImgError = true" class="img-fluid rounded">
+    </ng-container>
+
+    <ng-container *ngIf="!reference.PreviewImage || hasImgError">
+      <div class="placeholder rounded"></div>
+    </ng-container>
+
+    <div class="reference-text">
+      <h3>{{reference.Title}}</h3>
+      <p>
+        {{ reference.ShortDescription }}
+      </p>
+    </div>
+
+    <span class="co-link">
+      {{btnLabel}} <i class="fal fa-long-arrow-right"></i>
+    </span>
+  </div>
+</detail-link>

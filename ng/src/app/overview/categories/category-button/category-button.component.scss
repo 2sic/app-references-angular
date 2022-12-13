@@ -1,0 +1,31 @@
+
+button {
+  margin: 0px 5px 5px 0px;
+}
+
+.btn-category {
+  padding:0 0 6px 0;
+  margin: 0 36px 12px 0;
+  background:none;
+  color: #063E6A;
+  text-transform:uppercase;
+  font-size:14px;
+  outline:none;
+  font-weight:600;
+  border:0;
+  position:relative;
+}
+
+.btn-category:after {
+  content: " ";
+  height: 1px;
+  width: 0;
+  background: #0078d6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width .4s;
+}
+.btn-category.active:after, .btn-category:hover:after {
+  width:100%;
+}

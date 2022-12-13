@@ -1,0 +1,5 @@
+<div class="category-buttons" [sxc-toolbar]="toolbarservice.toolbarForCategory()" >
+  <ng-container *ngFor="let category of categories$ | async">
+    <app-category-button [category]="category"></app-category-button>
+  </ng-container>
+</div>

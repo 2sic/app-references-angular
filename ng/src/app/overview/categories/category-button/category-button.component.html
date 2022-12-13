@@ -1,0 +1,12 @@
+
+<button
+  type="button"
+  class="btn-category"
+  [routerLink]="[routerParam, category?.UrlPath]"
+  [routerLinkActive]="['active']"
+  (click)="select()"
+  [sxc-toolbar]="toolbarservice.toolbarFor(category)"
+  >
+
+  {{category.Name}}
+</button>

@@ -1,0 +1,15 @@
+
+<div class="row" [sxc-toolbar]="toolbarservice.toolbarFor()">
+  <ng-container *ngFor="let reference of references$ | async">
+
+    <div class="col-sm-12 col-lg-4 reference">
+      <app-reference-item [reference]="reference"></app-reference-item>
+    </div>
+
+  </ng-container>
+
+  <div class="col-sm-12 col-lg-4 reference" *ngIf="(references$ | async)?.length == 0">
+    Keine Referenzen für diese Kategorie
+  </div>
+
+</div>
