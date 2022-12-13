@@ -25,10 +25,8 @@ export class OverviewComponent {
     this.isAdmin = document.getElementsByTagName("app-root")[0].getAttribute("is-admin") == 'true' ? true : false;
 
     combineLatest([sxcData.categories$, sxcData.settings$]).pipe(
-      tap(result => console.log(result)),
       tap(result => this.settings = result[1]["Default"][0]),
       tap(result => this.categoryFilter = this.settings.CategoryFilter.length === 0 ? null : result[0].find(x => x.Id === this.settings.CategoryFilter[0].Id))
     ).subscribe();
   }
-
 }

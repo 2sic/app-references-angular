@@ -33,7 +33,6 @@ export class SxcDataService {
     }
 
     getImagesByReferenceId(referenceId: number): Observable<Image[]> {
-
       const params = new HttpParams().set('entityId', `${referenceId}`);
       return this.app.api('References').get<Image[]>('GetImages', params);
     }

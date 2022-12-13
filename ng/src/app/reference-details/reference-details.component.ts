@@ -69,7 +69,7 @@ export class ReferenceDetailsComponent implements OnInit {
       // image Lightbox
       this.images$.subscribe(data => {
         this.items = data.map(item =>
-          new ImageItem({ src: item.Url, thumb: item.Url })
+          new ImageItem({ src: item.Url + '?w=1600&h=1600&mode=crop&scale=both', thumb: item.Url + '?w=800&h=800&mode=crop&scale=both' })
         )
         this.gallery.ref().load(this.items);
       })

@@ -7,24 +7,24 @@
 
       <div *ngIf="!!reference?.Architect">
         <strong>Architekt</strong><br>
-        <div [innerHTML]="reference?.Architect"></div>
-        <br>
+        <div [innerHTML]="reference?.Architect" class="mb-3"></div>
+
       </div>
 
       <div *ngIf="!!reference?.Customer">
         <strong>Auftraggeber</strong><br>
-        <div [innerHTML]="reference?.Customer"></div>
+        <div [innerHTML]="reference?.Customer" class="mb-3"></div>
       </div>
-      <br>
+
 
       <div *ngIf="!!reference?.Description">
         <strong>Beschreibung</strong><br>
-        <div [innerHTML]="reference?.Description"></div>
+        <div [innerHTML]="reference?.Description" class="mb-3"></div>
       </div>
 
       <div *ngIf="!!reference?.Links">
         <strong>{{linksLabel}}</strong><br>
-        <div [innerHTML]="reference?.Links"></div>
+        <div [innerHTML]="reference?.Links" class="mb-3"></div>
       </div>
 
     </div>
@@ -36,21 +36,15 @@
 
       <!-- Thubmnail -->
         <div class="mb-3 col-12 col-sm-6 col-md-12">
-          <img [lightbox]="0"[src]="images[0].Url + '?w=800&h=800&mode=crop&scale=both'" class="img-fluid">
+          <img [lightbox]="0"[src]="images[0].Url + '?w=800&h=800&mode=crop&scale=both'" class="img-fluid rounded shadow">
         </div>
 
         <!-- bilder Galerie -->
         <div class=" col-12 col-sm-6 col-md-6 mb-3" *ngFor="let item of items | slice: 1; index as i">
-          <img class="img-fluid rounded shadow" [lightbox]="i+1" [src]="item.data.thumb + '?w=800&h=800&mode=crop&scale=both'">
+          <img class="img-fluid rounded shadow" [lightbox]="i+1" [src]="item.data.thumb">
         </div>
       </div>
     </div>
-
-
-<!-- alt Thubmnail -->
-<!-- <a href="{{images[0].Url}}?w=2000&h=2000&mode=max">
-  <img [src]="images[0].Url + '?w=400&h=300&mode=crop'" class="img-fluid">
-</a> -->
 
 
     <ng-container *ngIf="!reference">
