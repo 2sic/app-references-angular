@@ -11,5 +11,5 @@ export interface Reference {
     CreateDate: string;
     ShortDescription: string;
     Customer: string;
-    Architect: string;
+    Responsible: string;
 }

@@ -3,7 +3,7 @@
   "version": "14.00.00",
   "config": {
     "publish_path_ex": "..",
-    "publish_path": "C:\\Projects\\nvquicksite\\references\\Website\\Portals\\0\\2sxc\\App-References-Angular"
+    "publish_path": "C:\\Projects\\nvquicksite\\test-lepreiter\\Website\\Portals\\0\\2sxc\\Showcase References Angular"
   },
   "scripts": {
     "ng": "ng",
